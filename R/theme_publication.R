@@ -2,17 +2,16 @@
 #'
 #' This function allows you to adjust your plots for publication
 #' @param base_size default size of font
-#' @param base_family default font family
 #' @keywords cats
 #' @export
 #' @examples
 #' theme_Publication()
-theme_Publication <- function(base_size=12, base_family="helvetica") {
+theme_Publication <- function(base_size=12) {
       library(showtext)
       showtext_auto()
       library(grid)
       library(ggthemes)
-      (theme_foundation(base_size=base_size, base_family=base_family)
+      (theme_foundation(base_size=base_size)
        + theme(plot.title = element_text(face = "bold",
                                          size = rel(1.2), hjust = 0.5),
                text = element_text(),
@@ -32,7 +31,6 @@ theme_Publication <- function(base_size=12, base_family="helvetica") {
                legend.position = "bottom",
                legend.direction = "horizontal",
                legend.key.size= unit(0.2, "cm"),
-               legend.margin = unit(0, "cm"),
                legend.title = element_text(face="italic"),
                plot.margin=unit(c(10,5,5,5),"mm"),
                strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),

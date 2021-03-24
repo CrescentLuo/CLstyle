@@ -6,7 +6,7 @@
 #' @export
 #' @examples
 #' theme_Publication()
-theme_Publication <- function(base_size=12) {
+theme_publication <- function(base_size=12) {
       library(showtext)
       showtext_auto()
       library(grid)
